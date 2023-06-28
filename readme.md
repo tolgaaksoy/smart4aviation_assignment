@@ -27,20 +27,6 @@ There is a Main class acting like a presentation-controller class. It takes some
 There are also some unit test to test some critical functionalities. 
 ***
 
-*Outputs*
-``` text
-
-Your task is to implement application with two functionalities:
-1. For requested Flight Number and date will respond with following :
-   - Cargo Weight for requested Flight
-   - Baggage Weight for requested Flight
-   - Total Weight for requested Flight
-2. For requested IATA Airport Code and date will respond with following :
-   - Number of flights departing from this airport,
-   - Number of flights arriving to this airport,
-   - Total number (pieces) of baggage arriving to this airport,
-   - Total number (pieces) of baggage departing from this airport.
-
 ## How to run
 
 Requirements:
@@ -55,16 +41,16 @@ Java 17 and Maven
 * Build
 
 ```shell
-mvn clean install
+$ mvn clean install
 ```
 
 * Run app
 
 ```shell
-sh java -jar target/assingment-1.0-SNAPSHOT.jar
+$ java -jar target/smart4aviation-assignment.jar
 ```
 
-* note: There are some tests included in the project. You can examine the project.
+* Note: I had a problem running it from terminal with the standard maven plugin. As a solution, I replaced the plugin with maven-assembly-plugin. Problem solved. Please also try with the compiler if there is any problem. It works fine in the compiler.
 
 
 ## Example
