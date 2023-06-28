@@ -3,7 +3,6 @@ package io.smart4aviation.service.util;
 import io.smart4aviation.model.entity.FlightBaggage;
 import io.smart4aviation.model.entity.FlightCargo;
 import io.smart4aviation.model.enums.WeightUnit;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
