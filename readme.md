@@ -1,6 +1,36 @@
 # smart4aviation.aero Assignment
 
-Your task is to implement application with two functionalities :
+## Description
+
+
+***
+I tried to develop the application like a spring boot application. For example;
+
+There are some classes like Spring Jpa interfaces that are under the repository package. However, there are some models representing entities under the model package that are like representing some database tables in spring.
+
+Relations:
+
+FlightEntity 1-m CargoEntity
+
+CargoEntity 1-m FlightBaggage
+
+CargoEntity 1-m FlightCargo
+
+There is an abstract class named AbstractFlightLoad. This class extends by FlightBaggage and FlightCargo. Because these class have the same fields and these fields are process by a util class(like pieces and weight). I preferred to write two entity classes(FlightBaggage and FlightCargo) for that because the requirements are able to change in the future.
+
+The data come from JSON files that are stored in the resources folder. A FileReader util class read and deserialization to Entity classes.
+
+There are two different service interfaces for each functionality. Each service interface has its own implementation (sometimes we can need different implementations, so I use this concept).
+
+There is a Main class acting like a presentation-controller class. It takes some inputs and give outputs on the Java console.  
+
+There are also some unit test to test some critical functionalities. 
+***
+
+*Outputs*
+``` text
+
+Your task is to implement application with two functionalities:
 1. For requested Flight Number and date will respond with following :
    - Cargo Weight for requested Flight
    - Baggage Weight for requested Flight
